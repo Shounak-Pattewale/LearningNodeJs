@@ -2,13 +2,11 @@ const express = require("express");
 const app = express();
 const path = require('path');
 const bodyParser = require("body-parser");
+const userController = require("./controller/userControler");
 
 app.set('view engine','ejs');
 app.set('views', path.join(__dirname, '/views'));
 
-// Imports
-const userController = require("./controller/userControler")
-// const user = userController.getUserController()
 
 // Request Parsing
 app.use(bodyParser.json());
@@ -27,7 +25,7 @@ app.get('*',(req, res)=> {
     res.send("UNKNOWN URL..!!!")
 })
 
-app.listen(8080, () => {
-    console.log("Listening on port 8080!")
+app.listen(8084, () => {
+    console.log("Listening on port 8084 index!")
 })
 
