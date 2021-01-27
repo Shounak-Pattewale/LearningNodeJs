@@ -20,6 +20,7 @@ app.get('/',(req, res) => {
 
 app.get("/user", userController.getUser);
 app.post("/user", userController.saveUser);
+app.post("/finduser", userController.findUser);
 
 // Endpoint not defined
 app.get('*',(req, res)=> {
